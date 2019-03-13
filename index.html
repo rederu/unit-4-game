@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     <title>Crystal Collector</title>
@@ -14,46 +16,58 @@
 <body>
     <div class="container">
         <h1> Crystals Collector ! </h1>
-        <div id="instructions">
-            <p> You will be given a random number at the start of the game.</p>
-            <p> There are four crystals below. By clicking on a crystal you will add a specific amount of point to your
-                total score.</p>
+        <div class="card">
+            <div class="card-header card-title">
+                Instructions
+            </div>
+            <div class="card-body">
+                <p class="card-text"> You will be given a random number at the start of the game.</p>
+                <p class="card-text"> There are four crystals below. By clicking on a crystal you will add a specific
+                    amount of point to your
+                    total score.</p>
 
-            <p>You win the game by matching your total score to random nymber, you lose the fame if your total score
-                goes above the random number.</p>
-            <p>The value of each crystal is hidden from you until you click on it</p>
-            <p>Each tome when the game starts, the game will change the values for each crystal</p>
+                <p class="card-text">You win the game by matching your total score to random nymber, you lose the fame
+                    if your total score
+                    goes above the random number.</p>
+                <p class="card-text">The value of each crystal is hidden from you until you click on it</p>
+                <p class="card-text">Each tome when the game starts, the game will change the values for each crystal
+                </p>
+            </div>
         </div>
 
 
         <div id="ranNum">
             <h2 class="random-number">Here goes hidden number</h2>
-        </div>
-        <div id="WinsLosses">
-            <h3 class="wins">Wins: </h3>
-            <h3 class="losses"> Losses</h3>
-        </div>
 
-        <div id="crystal-container">
-            <div class="crystal-numbers">
-                <img src="assets/images/crystal01.png" class="crystal crystal-one">
-                <div class="crystal crystal-two"> Crystal 2 </div>
-                <div class="crystal crystal-three"> Crystal 3 </div>
-                <div class="crystal crystal-four"> Crystal 4 </div>
-
+        </div>
+        <div class="card mb-3" style="max-width:100%;">
+            <div class="row no-gutters">
+                <div class="col-md-8">
+                    <img src="assets/images/crystal01-120.png" class="crystal crystal-one">
+                    <img src="assets/images/crystal02-120.png" class="crystal crystal-two">
+                    <img src="assets/images/crystal03-120.png" class="crystal crystal-three">
+                    <img src="assets/images/crystal04-120.png" class="crystal crystal-four">
+                </div>
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <h3 class="wins">Wins: </h3>
+                        <h3 class="losses"> Losses</h3>
+                    </div>
+                </div>
             </div>
         </div>
+
 
         <div id="tScore">
-            <div class="total-score">
+            <h3 class="total-score">
                 Here goes the total score
-            </div>
+            </h3>
         </div>
 
     </div>
 
 
-<script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
