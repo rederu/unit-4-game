@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -13,12 +12,14 @@
     <title>Crystal Collector</title>
 </head>
 
-<body>
+<body class="bg-white">
     <div class="container">
-        <h1> Crystals Collector ! </h1>
+        <!--<h1 class="m-0 mt-4 mb-5"> Crystals Collector ! </h1>-->
+        <img src="assets/images/CrystalsCollector.png" class="rounded mx-auto d-block img-fluid" alt="...">
+
         <div class="card">
             <div class="card-header card-title">
-                Instructions
+                <h5>Instructions</h5>
             </div>
             <div class="card-body">
                 <p class="card-text"> You will be given a random number at the start of the game.</p>
@@ -34,34 +35,44 @@
                 </p>
             </div>
         </div>
-
-
-        <div id="ranNum">
-            <h2 class="random-number">Here goes hidden number</h2>
-
-        </div>
-        <div class="card mb-3" style="max-width:100%;">
-            <div class="row no-gutters">
-                <div class="col-md-8">
-                    <img src="assets/images/crystal01-120.png" class="crystal crystal-one">
-                    <img src="assets/images/crystal02-120.png" class="crystal crystal-two">
-                    <img src="assets/images/crystal03-120.png" class="crystal crystal-three">
-                    <img src="assets/images/crystal04-120.png" class="crystal crystal-four">
-                </div>
-                <div class="col-md-4">
-                    <div class="card-body">
-                        <h3 class="wins">Wins: </h3>
-                        <h3 class="losses"> Losses</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mt-3 mb-3">
+                    <div class="card-header">
+                        <h5 class="font-weight-bold">The Number</h5>
+                    </div>
+                    <div class="card-header">
+                        <h1 class="random-number text-center display-3 font-weight-bold text-success"> </h1>
                     </div>
                 </div>
             </div>
+            <div class="col-md-6">
+                    <div class="card mt-3 mb-3">
+                        <div class="card-header">
+                            <h5 class="font-weight-bold">Your Number</h5>
+                        </div>
+                        <div class="card-header">
+                            <h1 class="random-number text-center display-3 font-weight-bold text-info total-score"> </h1>
+                        </div>
+                    </div>
+                </div>
         </div>
 
-
-        <div id="tScore">
-            <h3 class="total-score">
-                Here goes the total score
-            </h3>
+        <div class="card mb-3" style="max-width:100%;">
+            <div class="row pt-2 pb-2 pl-3">
+                <div class="col-md-9">
+                    <img src="assets/images/crystal01-120.png" class="crystal crystal-one ml-2 mr-2">
+                    <img src="assets/images/crystal02-120.png" class="crystal crystal-two ml-2 mr-2">
+                    <img src="assets/images/crystal03-120.png" class="crystal crystal-three ml-2 mr-2">
+                    <img src="assets/images/crystal04-120.png" class="crystal crystal-four ml-2 mr-2">
+                </div>
+                <div class="col-md-3">
+                    <div class="card-body">
+                        <h3 class="wins">Wins: </h3>
+                        <h3 class="losses"> Losses: </h3>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
