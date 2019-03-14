@@ -30,7 +30,7 @@ function resetStats() {
     $(".total-score").val(totalScore) ;
     //show
     $(".random-number").text(randomNumber);
-    $(".total-score").text("Total Score: " +totalScore);
+    $(".total-score").text(totalScore);
 };
 
 function initialStats() {
@@ -41,7 +41,6 @@ function initialStats() {
     var crystalThree = randomCrystalNumber();
     var crystalFour = randomCrystalNumber();
     //Now, we assign the values to the elements in HTML
-
     $(".crystal-one").val(crystalOne) ;
     $(".crystal-two").val(crystalTwo);
     $(".crystal-three").val(crystalThree) ;
@@ -50,7 +49,7 @@ function initialStats() {
     ////
     $(".wins").text("Wins: " + wins);
     $(".losses").text("Losses: " + losses);
-    $(".total-score").text("Total Score: " +totalScore);
+    $(".total-score").text(totalScore);
 };
 
 
@@ -61,10 +60,10 @@ $(document).ready(function(){
         $(".random-number").text(randomNumber);
         initialStats();
     $(".crystal").click(function () {
-        //How do I assign the stuff to total score???
-        //numero1 += $(this).attr("value");
+        //Parse int to detect them as numbers.
+        //If there is no parseInt it concatenates the numbers as a string.
         totalScore += parseInt(this.value);
-        $(".total-score").text("Total Score: " + totalScore); //?????????????
+        $(".total-score").text(totalScore); 
         if(totalScore === randomNumber){
             wins ++;
             $(".wins").text("Wins: " + wins);
